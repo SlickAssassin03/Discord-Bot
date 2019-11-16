@@ -51,4 +51,5 @@ for filename in os.listdir('./cogs'):
         client.load_extension(f'cogs.{filename[:-3]}')
         console.out(f'Loaded package: cogs.{filename[:-3]}')
 
+# Runs bot
 client.run(token)
