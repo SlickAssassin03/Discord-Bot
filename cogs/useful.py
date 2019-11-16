@@ -9,7 +9,14 @@ class Useful(commands.Cog):
 
   @commands.command(aliases=['invite','invitecode','invcode'])
   async def inv(self, ctx):
-      await ctx.send('https://discord.gg/eqtAFCa')
+      embed = discord.Embed(
+        color = discord.Color.blue
+      )
+      embed.set_footer(text='The invite link for the server.')
+      embed.set_author(name='Invite Code:')
+      embed.add_field(name='Invite',value='https://discord.gg/eqtAFCa')
+
+      await ctx.say(embed=embed)
 
   @commands.command()
   async def info(self, ctx):
